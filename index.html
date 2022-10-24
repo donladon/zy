@@ -9,54 +9,8 @@ var $=function(id) {
    return document.getElementById(id);
 }
 
-function show_menu(num){
-for(i=0;i<100;i++){
-	if($('li0'+i)){
-	$('li0'+i).style.display='none';
-	$('f0'+i).className='';
-	 }
-}
-	  $('li0'+num).style.display='block';//触发以后信息块
-	  $('f0'+num).className='left02down01_xia_li';//触发以后TAG样式
-}
-
-function show_menuB(numB){
-	for(j=0;j<100;j++){
-		 if(j!=numB){
-			if($('Bli0'+j)){
-		  $('Bli0'+j).style.display='none';
-		  $('Bf0'+j).style.background='url(images/01.gif)';
-		}
-		 }
-	}
-	if($('Bli0'+numB)){   
-		if($('Bli0'+numB).style.display=='block'){
-		  $('Bli0'+numB).style.display='none';
-		 $('Bf0'+numB).style.background='url(images/01.gif)';
-		}else {
-		  $('Bli0'+numB).style.display='block';
-		  $('Bf0'+numB).style.background='url(images/02.gif)';
-		}
-	}
-}
-
 
 var temp=0;
-function show_menuC(){
-		if (temp==0){
-		 document.getElementById('LeftBox').style.display='none';
-	  	 document.getElementById('RightBox').style.marginLeft='0';
-		 document.getElementById('Mobile').style.background='url(images/center.gif)';
-
-		 temp=1;
-		}else{
-		document.getElementById('RightBox').style.marginLeft='222px';
-	   	document.getElementById('LeftBox').style.display='block';
-		document.getElementById('Mobile').style.background='url(images/center0.gif)';
-
-	   temp=0;
-			}
-	 }
 </script>
 </head>
 
@@ -64,31 +18,32 @@ function show_menuC(){
 <div class="header">
 	<div class="header03"></div>
 	<div class="header01"></div>
-	<div class="header02">注册用户信息管理系统</div>
+	<div class="header02">诊断信息界面</div>
 </div>
 <div class="left" id="LeftBox">
 	<div class="left01">
 		<div class="left01_right"></div>
 		<div class="left01_left"></div>
-		<div class="left01_c">超级管理员：admin</div>
+		<div class="left01_c">跌打损伤科李医生，欢迎您！</div>
 	</div>
 	<div class="left02">
 		<div class="left02top">
 			<div class="left02top_right"></div>
 			<div class="left02top_left"></div>
-			<div class="left02top_c">用户信息管理</div>
+			<div class="left02top_c">患者信息</div>
 		</div>
 	  <div class="left02down">
-			<div class="left02down01"><a  onclick="show_menuB(80)" href="javascript:;"><div id="Bf080" class="left02down01_img"></div>用户信息查询</a></div>
+			<div class="left02down01"><a  onclick="show_menuB(80)" href="javascript:;"><div id="Bf080" class="left02down01_img">
+
+			</div>患者信息管理</a></div>
 			<div class="left02down01_xia noneBox" id="Bli080">
 				<ul>
 					<li onmousemove="show_menu(10)" id="f010"><a href="#">&middot;精确查询</a></li>
 					<li onmousemove="show_menu(11)" id="f011"><a href="#">&middot;组合条件查询</a></li>
 				</ul>
 			</div>
-		    <div class="left02down01"><a onclick="show_menuB(81)" href="javascript:;">
-		      <div id="Bf081" class="left02down01_img"></div>
-		      用户密码管理</a></div>
+
+
 			<div class="left02down01_xia noneBox" id="Bli081">
 				<ul>
 					<li onmousemove="show_menu(12)" id="f012"><a href="#">&middot;找回密码</a></li>
@@ -101,35 +56,12 @@ function show_menuC(){
 		<div class="left02top">
 			<div class="left02top_right"></div>
 			<div class="left02top_left"></div>
-			<div class="left02top_c">用户分析</div>
+			<div class="left02top_c">诊断</div>
 		</div>
 		<div class="left02down">
-			<div class="left02down01"><a  onclick="show_menuB(82)" href="javascript:;"><div id="Bf082" class="left02down01_img"></div>用户注册统计</a></div>
-			<div class="left02down01"><a href="#"><div class="left02down01_img"></div>用户登录统计</a></div>
-			<div class="left02down01"><a href="#"><div class="left02down01_img"></div>用户激活统计</a></div>
-		</div>
-	</div>
-	<div class="left02">
-		<div class="left02top">
-			<div class="left02top_right"></div>
-			<div class="left02top_left"></div>
-			<div class="left02top_c">用户过滤</div>
-		</div>
-		<div class="left02down">
-			<div class="left02down01"><a href="#"><div class="left02down01_img"></div>过滤IP(段)</a></div>
-			<div class="left02down01"><a href="#"><div class="left02down01_img"></div>过滤用户名</a></div>
-		</div>
-	</div>
-	<div class="left02">
-		<div class="left02top">
-			<div class="left02top_right"></div>
-			<div class="left02top_left"></div>
-			<div class="left02top_c">系统管理</div>
-		</div>
-		<div class="left02down">
-			<div class="left02down01"><a href="#"><div class="left02down01_img"></div>权限管理</a></div>
-			<div class="left02down01"><a href="#"><div class="left02down01_img"></div>用户组管理</a></div>
-			<div class="left02down01"><a href="#"><div class="left02down01_img"></div>操作日志</a></div>
+			<div class="left02down01"><a  onclick="show_menuB(82)" href="javascript:;"><div id="Bf082" class="left02down01_img"></div>待就诊</a></div>
+			<div class="left02down01"><a href="#"><div class="left02down01_img"></div>已就诊</a></div>
+
 		</div>
 	</div>
 	<div class="left01">
@@ -138,26 +70,193 @@ function show_menuC(){
 		<div class="left03_c">安全退出</div>
 	</div>
 </div>
+
+
+
+
+
 <div class="rrcc" id="RightBox">
+
+	
 	<div class="center" id="Mobile" onclick="show_menuC()"></div>
+	
 	<div class="right" id="li010">
-		<div class="right01"><img src="images/04.gif" /> 用户信息查询 &gt; <span>精确查询</span></div>
+
+		<font size='4'>
+			病人姓名：{{data from django}} &nbsp;&nbsp;性别：{{data from django}}&nbsp;&nbsp;年龄：{{data from django}}<br>
+			病人联系方式：{{data from django}}&nbsp;&nbsp;身份证号：{{data from django}}
+		</font>
+		<br><br><br>
+
+
+		<div class="right01;" style="font-size:20px">1、症状诊断:
+			<br>
+		<input type="remark" name="诊断信息" class="form-control" style="height:34px;max-height:150px';" name='诊疗信息'>
+		<br>
+		<button type="reset" class="btn btn-white">取消</button>
+		<button type="submit" class="btn btn-primary" name='选择化验' value="化验">确定</button>
+		<br>
+		<br>
+
+
+
+				<section class="panel">
+					<header class="panel-heading font-bold">
+					</header>
+					<div class="panel-body">
+					<form  class="form-horizontal" method="POST">
+						<div class="form-group">
+						<label class="col-sm-2 control-label">2、药品诊断</label>
+						<div class="col-sm-10">
+							<select name="account" class="form-control m-b">
+							  <option>跳跳糖</option>
+							  <option>决明子</option>
+							  <option>艾叶</option>
+							</select>
+
+						  </div>
+						  <!-- 添加药品数量-->
+						  <div class="form-group">
+								<label class="col-sm-2 control-label">数量</label>
+								<div class="col-sm-10">
+								<div id="MySpinner" class="spinner input-group" data-min="1" data-max="10">
+								<input type="text" class="form-control spinner-input" value="1" name="spinner" maxlength="3">
+								<div class="btn-group btn-group-vertical input-group-btn">
+								<button type="button" class="btn btn-white spinner-up">
+								<i class="fa fa-chevron-up text-muted"></i>
+								</button>
+								<button type="button" class="btn btn-white spinner-down">
+								<i class="fa fa-chevron-down text-muted"></i>
+								</button>
+								</div>
+								</div>
+								</div>
+							</div>
+
+						<br>
+						<!---取消确定--->
+						<div class="col-sm-4 col-sm-offset-2">
+							<button type="reset" class="btn btn-white">取消</button>
+							<button type="submit" class="btn btn-primary">确定</button>
+						</div>
+
+						</div>
+
+
+
+					</form>
+		<br>
+		<!---理疗部分--->
+		<section class="panel">
+			<header class="panel-heading font-bold">
+			</header>
+			<div class="panel-body">
+			<form  class="form-horizontal" method="POST">
+				<div class="form-group">
+				<label class="col-sm-2 control-label">3、理疗类型</label>
+				<div class="col-sm-10">
+					<select name="account" class="form-control m-b">
+					<option>针灸</option>
+					<option>拔罐</option>
+					<option>大保健</option>
+					</select>
+				</div>
+				<br>
+				<div class="col-sm-4 col-sm-offset-2">
+					<button type="reset" class="btn btn-white">取消</button>
+					<button type="submit" class="btn btn-primary">确定</button>
+				</div>
+				</div>
+
+
+			</form>
+			<br>
+			</div>
+
+					
+					<div class="form-group" style="width: 100%;float:left;">
+					  <!-- 添加备注部分 -->
+					  <label class="col-sm-2 control-label">4、添加备注</label>
+					  <div class="col-sm-10">
+						<input type="remark" class="form-control" style="height:34px;max-height:150px">
+					  </div>
+					</div>
+					<br>
+					<div class="form-group">
+					  <!-- 提交部分 -->
+					  <div class="col-sm-4 col-sm-offset-2">
+						<button type="reset" class="btn btn-white">取消</button>
+						<button type="submit" class="btn btn-primary">确定</button>
+					  </div>
+					</div>
+				  </form>
+				</div>
+
+
+
 	</div>
 	
-	<div class="right noneBox" id="li011">
-		<div class="right01"><img src="images/04.gif" /> 用户信息查询 &gt; <span>组合条件查询</span></div>
-	</div>
-	<div class="right noneBox" id="li012">
-		<div class="right01"><img src="images/04.gif" /> 用户密码管理 &gt; <span>找回密码</span></div>
-	</div>
-	<div class="right noneBox" id="li013">
-		<div class="right01"><img src="images/04.gif" /> 用户密码管理 &gt; <span>更改密码</span></div>
-	</div>
-</div>
+</div>	
+
+
+<!-- test部分 --------------------------->
 
 
 
-	
+<!-- 药物部分 -->
+
+<!-- <section class="panel">
+	<header class="panel-heading font-bold">
+	  开具药方
+	</header>
+	<div class="panel-body">
+	  <form action="#" class="form-horizontal" method="POST"> -->
+		<!-- 这里是from -->
+		<!-- <div class="form-group" style="width: 50%;float: left;">
+		  <label class="col-sm-2 control-label">药物</label>
+		  <div class="col-sm-10">
+			<select name="account" class="form-control m-b">
+			  <option>针灸</option>
+			  <option>拔罐</option>
+			  <option></option>
+			</select>
+		  </div>
+		</div>
+		<div class="form-group" style="width: 50%;float: left;">
+		  <label class="col-sm-2 control-label">数量</label>
+		  <div class="col-sm-10">
+		  <div id="MySpinner" class="spinner input-group" data-min="1" data-max="10">
+		  <input type="text" class="form-control spinner-input" value="1" name="spinner" maxlength="3">
+		  <div class="btn-group btn-group-vertical input-group-btn">
+		  <button type="button" class="btn btn-white spinner-up">
+		  <i class="fa fa-chevron-up text-muted"></i>
+		  </button>
+		  <button type="button" class="btn btn-white spinner-down">
+		  <i class="fa fa-chevron-down text-muted"></i>
+		  </button>
+		  </div>
+		  </div>
+		  </div>
+		</div>
+		<div class="form-group" style="width: 100%;float:left;"> -->
+		  <!-- 添加备注部分 -->
+		  <!-- <label class="col-sm-2 control-label">添加备注</label>
+		  <div class="col-sm-10">
+			<input type="remark" class="form-control" style="height:34px;max-height:150px">
+		  </div>
+		</div> -->
+		<!-- <div class="form-group"> -->
+		  <!-- 提交部分 -->
+		  <!-- <div class="col-sm-4 col-sm-offset-2">
+			<button type="reset" class="btn btn-white">取消</button>
+			<button type="submit" class="btn btn-primary">确定</button>
+		  </div>
+		</div>
+	  </form>
+	</div>
+  </section> --> 
+
+
 
 </body>
 </html>
